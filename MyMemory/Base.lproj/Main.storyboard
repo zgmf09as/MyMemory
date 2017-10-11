@@ -73,6 +73,11 @@
                                         <constraint firstItem="2dW-BA-WO3" firstAttribute="leading" secondItem="QTp-BM-2OH" secondAttribute="leadingMargin" id="tq2-0M-tD5"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="2dW-BA-WO3" id="aMS-En-L8j"/>
+                                    <outlet property="regdate" destination="8xD-Np-4T8" id="kjU-MK-wLA"/>
+                                    <outlet property="subject" destination="f6k-bx-NSu" id="GQh-J0-TC0"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="O8w-B8-WrV" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -130,6 +135,12 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="BxA-SD-CaY" secondAttribute="bottom" id="wCU-4K-3dn"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="1HU-Kt-0qD" id="lJt-JM-wSi"/>
+                                    <outlet property="img" destination="BxA-SD-CaY" id="c9R-Va-9iu"/>
+                                    <outlet property="regdate" destination="KsO-35-xF7" id="wU9-kB-5H5"/>
+                                    <outlet property="subject" destination="HcD-lb-roo" id="7mV-UW-uUL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
