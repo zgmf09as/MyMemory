@@ -14,4 +14,19 @@ class MemoData {
     var contents: String?  // 메모 내용
     var image: UIImage?    // 이미지
     var regdate: Date?     // 작성일
+    
+    init(title: String?, contents: String?, image: UIImage?) {
+        self.title = title
+        self.contents = contents
+        self.image = image
+        self.regdate = Date()
+    }
+    
+    init() {
+        memoIdx = nil
+        title = nil
+        contents = nil
+        image = nil
+        regdate = nil
+    }
 }
