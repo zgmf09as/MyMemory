@@ -152,7 +152,7 @@
                     <navigationItem key="navigationItem" title="목록" id="pzo-QI-Dca">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SGD-jO-cf1">
                             <connections>
-                                <segue destination="Z66-VM-YTv" kind="show" id="2tk-wp-L1f"/>
+                                <segue destination="Z66-VM-YTv" kind="show" identifier="" id="2tk-wp-L1f"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -167,7 +167,7 @@
         <!--상세화면-->
         <scene sceneID="ahs-au-dqD">
             <objects>
-                <viewController title="상세화면" id="sOM-BP-axK" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" title="상세화면" id="sOM-BP-axK" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Otp-OF-for">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Be-qi-IoL">
-                                <rect key="frame" x="16" y="177.66666666666669" width="250" height="250.00000000000006"/>
+                                <rect key="frame" x="16" y="176.66666666666669" width="250" height="250.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="6f3-zE-UhU"/>
                                     <constraint firstAttribute="width" constant="250" id="nN8-R7-SLs"/>
@@ -206,6 +206,11 @@
                         <viewLayoutGuide key="safeArea" id="DYw-zZ-xxu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="0vd-AM-TKz"/>
+                    <connections>
+                        <outlet property="contents" destination="D10-v2-dCV" id="gHf-hy-afp"/>
+                        <outlet property="img" destination="1Be-qi-IoL" id="28D-Ie-8uh"/>
+                        <outlet property="subject" destination="Mb8-iw-OSw" id="WKR-l1-meg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyq-5R-PY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

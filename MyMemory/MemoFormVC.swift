@@ -47,12 +47,38 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     @IBAction func pick(_ sender: Any) {
         // 이미지 피커 인스턴스 생성
         let picker = UIImagePickerController()  // 델리게이트 패턴 기반으로 동작
-        
         picker.delegate = self
         picker.allowsEditing = true
         
-        // 이미지 피커 화면을 표시
-        self.present(picker, animated: false, completion: nil)
+        let alert = UIAlertController(title: nil, message: "이미지를 가져올 곳을 선택해주세요.", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "카메라", style: .default, handler: { (action) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                picker.sourceType = .camera
+            } else {
+                picker.sourceType = .savedPhotosAlbum
+            }
+            
+            // 이미지 피커 화면을 표시
+            self.present(picker, animated: false, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "저장앨범", style: .default, handler: { (action) in
+            picker.sourceType = .savedPhotosAlbum
+            
+            // 이미지 피커 화면을 표시
+            self.present(picker, animated: false, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "사진 라이브러리", style: .default, handler: { (action) in
+            picker.sourceType = .photoLibrary
+            
+            // 이미지 피커 화면을 표시
+            self.present(picker, animated: false, completion: nil)
+        }))
+        
+        // 메뉴 표시
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

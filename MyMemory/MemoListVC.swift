@@ -36,20 +36,40 @@ class MemoListVC: UITableViewController {
         let row = self.appDelegate.memolist[indexPath.row]
         
         let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
+   
         // 재사용 큐로부터 셀 인스턴스 받기
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MemoCell
+        let baseCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
+        if let cell = baseCell as? MemoCell {
+            // 메모 셀 내용 구성
+            cell.subject?.text = row.title
+            cell.contents?.text = row.contents
+            cell.img?.image = row.image
+            
+            // Date 타입의 날짜를 아래 포맷에 맞게 변경
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            cell.regdate?.text = formatter.string(from: row.regdate!)
+            
+            return cell
+        }
+        
+        return baseCell
+    }
+    
+    // 테이블의 행을 선택시 호출되는 메소드
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // memolist 배열에서 데이터 로드
+        let row = self.appDelegate.memolist[indexPath.row]
 
-        // 메모 셀 내용 구성
-        cell.subject?.text = row.title
-        cell.contents?.text = row.contents
-        cell.img?.image = row.image
-        
-        // Date 타입의 날짜를 아래 포맷에 맞게 변경
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        cell.regdate?.text = formatter.string(from: row.regdate!)
-        
-        return cell
+        // 상세 화면 인스턴스 생성
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MemoRead") as? MemoReadVC else {
+            return
+        }
+
+        // 값 전달 후, 화면 이동
+        vc.param = row
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 화면이 나타날 때마다 호출되는 메소드
