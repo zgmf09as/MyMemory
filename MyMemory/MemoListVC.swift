@@ -10,6 +10,9 @@ import UIKit
 
 class MemoListVC: UITableViewController {
 
+    // 앱 델리게이트 객체의 참조 정보 로드
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,76 +23,41 @@ class MemoListVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    // 테이블의 행의 개수를 결정하는 메소드
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.appDelegate.memolist.count
     }
 
-    /*
+    // 테이블 행을 구성하는 메소드
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        // memolist 배열 데이터에서 주어진 ㄴ행에 맞는 데이터 로드
+        let row = self.appDelegate.memolist[indexPath.row]
+        
+        let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
+        // 재사용 큐로부터 셀 인스턴스 받기
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MemoCell
 
-        // Configure the cell...
-
+        // 메모 셀 내용 구성
+        cell.subject?.text = row.title
+        cell.contents?.text = row.contents
+        cell.img?.image = row.image
+        
+        // Date 타입의 날짜를 아래 포맷에 맞게 변경
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        cell.regdate?.text = formatter.string(from: row.regdate!)
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    // 화면이 나타날 때마다 호출되는 메소드
+    // 1. 타 화면으로 이동했다가 다시 목록으로 돌아왔을때
+    // 2. 홈버튼을 눌러 앱이 백그라운드 모드로 내려간후 다시 활성화되었을 때
+    // 3. 뷰 컨트롤러가 화면에 표시될 때
+    override func viewWillAppear(_ animated: Bool) {
+        // 테이블 데이터 다시 읽기. 행 구성 메소드가 재실행 된다.
+        self.tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
