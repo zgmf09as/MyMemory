@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -24,7 +24,17 @@
                         <view key="tableFooterView" contentMode="scaleToFill" id="riu-eG-PGw">
                             <rect key="frame" x="0.0" y="188" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaU-Lv-Vaa" customClass="CSLogButton" customModule="MyMemory" customModuleProvider="target">
+                                    <rect key="frame" x="167.66666666666666" y="7" width="39" height="30"/>
+                                    <state key="normal" title="더보기"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="BaU-Lv-Vaa" firstAttribute="centerY" secondItem="riu-eG-PGw" secondAttribute="centerY" id="9a8-KR-2bD"/>
+                                <constraint firstItem="BaU-Lv-Vaa" firstAttribute="centerX" secondItem="riu-eG-PGw" secondAttribute="centerX" id="bqy-A1-kUT"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="3JM-hO-qmj" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
@@ -88,7 +98,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BxA-SD-CaY">
-                                            <rect key="frame" x="8" y="8" width="54" height="63.666666666666671"/>
+                                            <rect key="frame" x="8" y="7.9999999999999964" width="54" height="63.666666666666657"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="BxA-SD-CaY" secondAttribute="height" multiplier="11:13" id="3Kb-eb-vWP"/>
                                             </constraints>
@@ -185,7 +195,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Be-qi-IoL">
-                                <rect key="frame" x="16" y="176.66666666666669" width="250" height="250.00000000000006"/>
+                                <rect key="frame" x="16" y="177.66666666666663" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="6f3-zE-UhU"/>
                                     <constraint firstAttribute="width" constant="250" id="nN8-R7-SLs"/>
@@ -224,27 +234,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kiK-ql-mCw">
+                                <rect key="frame" x="0.0" y="88" width="375" height="350"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="Z8v-6C-H6B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AaY-ls-fiw">
-                                <rect key="frame" x="0.0" y="363" width="250" height="249"/>
+                                <rect key="frame" x="0.0" y="453" width="250" height="249"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="aa2-oJ-mwT"/>
                                     <constraint firstAttribute="height" constant="249" id="kIe-fO-zlW"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kiK-ql-mCw">
-                                <rect key="frame" x="0.0" y="98" width="375" height="250"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Z8v-6C-H6B"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AaY-ls-fiw" firstAttribute="top" secondItem="kiK-ql-mCw" secondAttribute="bottom" constant="15" id="2x2-GI-WO9"/>
-                            <constraint firstItem="kiK-ql-mCw" firstAttribute="top" secondItem="2KH-EI-hA7" secondAttribute="top" constant="10" id="30c-FT-i8k"/>
+                            <constraint firstItem="kiK-ql-mCw" firstAttribute="top" secondItem="2KH-EI-hA7" secondAttribute="top" id="30c-FT-i8k"/>
                             <constraint firstItem="2KH-EI-hA7" firstAttribute="trailing" secondItem="kiK-ql-mCw" secondAttribute="trailing" id="FQW-dl-1Xh"/>
                             <constraint firstItem="AaY-ls-fiw" firstAttribute="leading" secondItem="2KH-EI-hA7" secondAttribute="leading" id="Hp9-yP-RQj"/>
                             <constraint firstItem="kiK-ql-mCw" firstAttribute="leading" secondItem="2KH-EI-hA7" secondAttribute="leading" id="xNk-OI-hOd"/>

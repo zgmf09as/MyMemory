@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42049B1E1F987EFF0007CA20 /* CSLogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42049B1D1F987EFF0007CA20 /* CSLogButton.swift */; };
+		42049B221F98825A0007CA20 /* memo-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42049B1F1F98825A0007CA20 /* memo-background@2x.png */; };
+		42049B231F98825A0007CA20 /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42049B201F98825A0007CA20 /* button-bg.png */; };
+		42049B241F98825A0007CA20 /* warning-icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42049B211F98825A0007CA20 /* warning-icon-60@2x.png */; };
 		428952321F90A0E6009F60D2 /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952311F90A0E6009F60D2 /* fountainpen@2x.png */; };
 		428952491F90A672009F60D2 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952331F90A670009F60D2 /* Icon-App-40x40@1x.png */; };
 		4289524A1F90A672009F60D2 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952341F90A670009F60D2 /* Icon-App-57x57@2x.png */; };
@@ -44,6 +48,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42049B1D1F987EFF0007CA20 /* CSLogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSLogButton.swift; sourceTree = "<group>"; };
+		42049B1F1F98825A0007CA20 /* memo-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memo-background@2x.png"; sourceTree = "<group>"; };
+		42049B201F98825A0007CA20 /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
+		42049B211F98825A0007CA20 /* warning-icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-icon-60@2x.png"; sourceTree = "<group>"; };
 		428952311F90A0E6009F60D2 /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 		428952331F90A670009F60D2 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
 		428952341F90A670009F60D2 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
@@ -96,6 +104,9 @@
 		4289522E1F90A046009F60D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42049B201F98825A0007CA20 /* button-bg.png */,
+				42049B1F1F98825A0007CA20 /* memo-background@2x.png */,
+				42049B211F98825A0007CA20 /* warning-icon-60@2x.png */,
 				4289525F1F90A73E009F60D2 /* ItunesArtwork@2x.png */,
 				428952381F90A670009F60D2 /* Icon-App-20x20@1x.png */,
 				428952391F90A670009F60D2 /* Icon-App-20x20@2x.png */,
@@ -155,6 +166,7 @@
 				8504BDD61F8D4C5B00D805C7 /* MemoReadVC.swift */,
 				8504BDD81F8D4CE400D805C7 /* MemoCell.swift */,
 				8504BDDA1F8E7BB700D805C7 /* MemoData.swift */,
+				42049B1D1F987EFF0007CA20 /* CSLogButton.swift */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -232,13 +244,16 @@
 				428952581F90A672009F60D2 /* Icon-App-60x60@2x.png in Resources */,
 				428952501F90A672009F60D2 /* Icon-App-40x40@3x.png in Resources */,
 				428952511F90A672009F60D2 /* Icon-App-29x29@1x.png in Resources */,
+				42049B221F98825A0007CA20 /* memo-background@2x.png in Resources */,
 				4289524E1F90A672009F60D2 /* Icon-App-20x20@1x.png in Resources */,
+				42049B241F98825A0007CA20 /* warning-icon-60@2x.png in Resources */,
 				8504BDCB1F8BC85E00D805C7 /* LaunchScreen.storyboard in Resources */,
 				428952551F90A672009F60D2 /* Icon-App-40x40@2x.png in Resources */,
 				4289525A1F90A672009F60D2 /* Icon-App-57x57@1x.png in Resources */,
 				4289524A1F90A672009F60D2 /* Icon-App-57x57@2x.png in Resources */,
 				428952561F90A672009F60D2 /* Icon-App-76x76@1x.png in Resources */,
 				8504BDC81F8BC85E00D805C7 /* Assets.xcassets in Resources */,
+				42049B231F98825A0007CA20 /* button-bg.png in Resources */,
 				428952321F90A0E6009F60D2 /* fountainpen@2x.png in Resources */,
 				4289524F1F90A672009F60D2 /* Icon-App-20x20@2x.png in Resources */,
 				428952521F90A672009F60D2 /* Icon-App-60x60@3x.png in Resources */,
@@ -255,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42049B1E1F987EFF0007CA20 /* CSLogButton.swift in Sources */,
 				8504BDD31F8D4BF600D805C7 /* MemoListVC.swift in Sources */,
 				8504BDD71F8D4C5B00D805C7 /* MemoReadVC.swift in Sources */,
 				8504BDC61F8BC85E00D805C7 /* MyMemory.xcdatamodeld in Sources */,

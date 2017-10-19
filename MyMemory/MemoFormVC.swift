@@ -16,11 +16,18 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     
     // 저장 버튼을 클릭했을 때 호출되는 메소드
     @IBAction func save(_ sender: Any) {
+        // 경고창 사용될 콘텐츠 뷰 컨틀롤러 구성
+        let alertV = UIViewController()
+        let iconImage = UIImage(named: "warning-icon-60")
+        alertV.view = UIImageView(image: iconImage)
+        alertV.preferredContentSize = iconImage?.size ?? CGSize.zero
+        
         // 내용을 입력하지 않은 경우 경고 띄우기
         guard self.contents.text?.isEmpty == false else {
             let alert = UIAlertController(title: nil, message: "내용을 입력해주세요", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alert.setValue(alertV, forKey: "contentViewController")
             self.present(alert, animated: true, completion: nil)
             return
         }
@@ -86,6 +93,16 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.contents.delegate = self
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "memo-background")!)
+        
+        contents.layer.borderWidth = 0
+        contents.layer.borderColor = UIColor.clear.cgColor
+        contents.backgroundColor = UIColor.clear
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 9
+        contents.attributedText = NSAttributedString(string: " ", attributes: [NSAttributedStringKey.paragraphStyle: style])
+        contents.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -112,14 +129,12 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         // 내비기에션 타이틀에 표시
         self.navigationItem.title = subject
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let bar = navigationController?.navigationBar
+        
+        let ts = TimeInterval(0.3)
+        UIView.animate(withDuration: ts, animations: { bar?.alpha = ( bar?.alpha == 0 ? 1 : 0 )})
     }
-    */
 
 }
