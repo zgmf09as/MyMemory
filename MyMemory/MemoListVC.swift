@@ -21,8 +21,22 @@ class MemoListVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        setSideBarCallButton()
     }
 
+    private func setSideBarCallButton() {
+        if let revealVC = revealViewController() {
+            
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named: "sidemenu.png")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            
+            navigationItem.leftBarButtonItem = btn
+            
+            view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
+    }
     // 테이블의 행의 개수를 결정하는 메소드
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

@@ -21,6 +21,7 @@
 		4206D4FF1F9A163600F61B3E /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4206D4F61F9A163500F61B3E /* icon02.png */; };
 		4206D5001F9A163600F61B3E /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4206D4F71F9A163500F61B3E /* sidemenu.png */; };
 		4206D5011F9A163600F61B3E /* icon01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4206D4F81F9A163500F61B3E /* icon01.png */; };
+		4206D5041F9A1A5400F61B3E /* SideBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206D5031F9A1A5400F61B3E /* SideBarVC.swift */; };
 		428952321F90A0E6009F60D2 /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952311F90A0E6009F60D2 /* fountainpen@2x.png */; };
 		428952491F90A672009F60D2 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952331F90A670009F60D2 /* Icon-App-40x40@1x.png */; };
 		4289524A1F90A672009F60D2 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952341F90A670009F60D2 /* Icon-App-57x57@2x.png */; };
@@ -74,6 +75,7 @@
 		4206D4F61F9A163500F61B3E /* icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02.png; sourceTree = "<group>"; };
 		4206D4F71F9A163500F61B3E /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
 		4206D4F81F9A163500F61B3E /* icon01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon01.png; sourceTree = "<group>"; };
+		4206D5031F9A1A5400F61B3E /* SideBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarVC.swift; sourceTree = "<group>"; };
 		428952311F90A0E6009F60D2 /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 		428952331F90A670009F60D2 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
 		428952341F90A670009F60D2 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				8504BDDA1F8E7BB700D805C7 /* MemoData.swift */,
 				42049B1D1F987EFF0007CA20 /* CSLogButton.swift */,
 				4206D4EC1F9A15AB00F61B3E /* MyMemory-Bridging-Header.h */,
+				4206D5031F9A1A5400F61B3E /* SideBarVC.swift */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				8504BDD71F8D4C5B00D805C7 /* MemoReadVC.swift in Sources */,
 				8504BDC61F8BC85E00D805C7 /* MyMemory.xcdatamodeld in Sources */,
 				8504BDDB1F8E7BB700D805C7 /* MemoData.swift in Sources */,
+				4206D5041F9A1A5400F61B3E /* SideBarVC.swift in Sources */,
 				4206D4EF1F9A15AD00F61B3E /* SWRevealViewController.m in Sources */,
 				8504BDD51F8D4C4A00D805C7 /* MemoFormVC.swift in Sources */,
 				8504BDBE1F8BC85E00D805C7 /* AppDelegate.swift in Sources */,
