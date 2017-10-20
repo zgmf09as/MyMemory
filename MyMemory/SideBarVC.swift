@@ -54,6 +54,15 @@ class SideBarVC: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let uv = self.storyboard?.instantiateViewController(withIdentifier: "MemoForm")
+            let target = self.revealViewController().frontViewController as! UINavigationController
+            target.pushViewController(uv!, animated: true)
+            self.revealViewController().revealToggle(self)
+        }
+    }
 
     private func setHederArea() {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 70))
@@ -83,6 +92,10 @@ class SideBarVC: UITableViewController {
         let defaultProfile = UIImage(named: "account.jpg")
         profileImage.image = defaultProfile
         profileImage.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
+        
+        profileImage.layer.cornerRadius = profileImage.frame.width/2
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.borderWidth = 0
         
         headerView.addSubview(profileImage)
     }
