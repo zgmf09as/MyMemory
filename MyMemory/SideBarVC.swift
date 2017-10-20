@@ -11,6 +11,7 @@ import UIKit
 class SideBarVC: UITableViewController {
 
     let titles = ["새글 작성하기", "친구 새글", "달력으로 보기", "공지사항", "통계", "계정 관리"]
+    
     let icons = [
         UIImage(named: "icon01.png"),
         UIImage(named: "icon02.png"),
@@ -20,19 +21,18 @@ class SideBarVC: UITableViewController {
         UIImage(named: "icon06.png")
     ]
     
+    let nameLabel = UILabel()
+    let emailLabel = UILabel()
+    let profileImage = UIImageView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setHederArea()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -55,6 +55,37 @@ class SideBarVC: UITableViewController {
         return cell
     }
 
+    private func setHederArea() {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 70))
+        
+        headerView.backgroundColor = UIColor.brown
+        
+        tableView.tableHeaderView = headerView
+        
+        nameLabel.frame = CGRect(x: 70, y: 15, width: 100, height: 30)
+        nameLabel.text = "꼼꼼한 재은 씨"
+        nameLabel.textColor = UIColor.white
+        
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        nameLabel.backgroundColor = UIColor.clear
+        
+        headerView.addSubview(nameLabel)
+        
+        emailLabel.frame = CGRect(x: nameLabel.frame.origin.x, y: nameLabel.frame.origin.y*2, width: 100, height: 30)
+        
+        emailLabel.text = "sqlpro@naver.com"
+        emailLabel.textColor = UIColor.white
+        
+        emailLabel.font = UIFont.systemFont(ofSize: 11)
+        emailLabel.backgroundColor = UIColor.clear
+        headerView.addSubview(emailLabel)
+        
+        let defaultProfile = UIImage(named: "account.jpg")
+        profileImage.image = defaultProfile
+        profileImage.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
+        
+        headerView.addSubview(profileImage)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
