@@ -254,6 +254,38 @@
             </objects>
             <point key="canvasLocation" x="489" y="745"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ug8-U4-jjy">
+            <objects>
+                <navigationController storyboardIdentifier="_Profile" hidesBarsOnTap="YES" hidesBarsWhenKeyboardAppears="YES" hidesBarsWhenVerticallyCompact="YES" id="f0a-20-lzj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kzy-Uu-kcH">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9UF-Qp-viB" kind="relationship" relationship="rootViewController" id="wU1-Qi-h6A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LT3-n0-KGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1366" y="745"/>
+        </scene>
+        <!--프로필-->
+        <scene sceneID="QTy-1Z-1yU">
+            <objects>
+                <viewController id="9UF-Qp-viB" customClass="ProfileVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N5r-Ds-t3s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="l40-j0-Bul"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="프로필" id="3r5-5u-8XS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zn4-jr-w6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="745"/>
+        </scene>
         <!--메모 작성-->
         <scene sceneID="oU6-72-LcS">
             <objects>

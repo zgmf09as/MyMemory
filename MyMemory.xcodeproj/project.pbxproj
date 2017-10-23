@@ -22,6 +22,7 @@
 		4206D5001F9A163600F61B3E /* sidemenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4206D4F71F9A163500F61B3E /* sidemenu.png */; };
 		4206D5011F9A163600F61B3E /* icon01.png in Resources */ = {isa = PBXBuildFile; fileRef = 4206D4F81F9A163500F61B3E /* icon01.png */; };
 		4206D5041F9A1A5400F61B3E /* SideBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206D5031F9A1A5400F61B3E /* SideBarVC.swift */; };
+		4206D5061F9D83B800F61B3E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206D5051F9D83B800F61B3E /* ProfileVC.swift */; };
 		428952321F90A0E6009F60D2 /* fountainpen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952311F90A0E6009F60D2 /* fountainpen@2x.png */; };
 		428952491F90A672009F60D2 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952331F90A670009F60D2 /* Icon-App-40x40@1x.png */; };
 		4289524A1F90A672009F60D2 /* Icon-App-57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 428952341F90A670009F60D2 /* Icon-App-57x57@2x.png */; };
@@ -76,6 +77,7 @@
 		4206D4F71F9A163500F61B3E /* sidemenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sidemenu.png; sourceTree = "<group>"; };
 		4206D4F81F9A163500F61B3E /* icon01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon01.png; sourceTree = "<group>"; };
 		4206D5031F9A1A5400F61B3E /* SideBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarVC.swift; sourceTree = "<group>"; };
+		4206D5051F9D83B800F61B3E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		428952311F90A0E6009F60D2 /* fountainpen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fountainpen@2x.png"; sourceTree = "<group>"; };
 		428952331F90A670009F60D2 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
 		428952341F90A670009F60D2 /* Icon-App-57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-57x57@2x.png"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				42049B1D1F987EFF0007CA20 /* CSLogButton.swift */,
 				4206D4EC1F9A15AB00F61B3E /* MyMemory-Bridging-Header.h */,
 				4206D5031F9A1A5400F61B3E /* SideBarVC.swift */,
+				4206D5051F9D83B800F61B3E /* ProfileVC.swift */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				4206D4EF1F9A15AD00F61B3E /* SWRevealViewController.m in Sources */,
 				8504BDD51F8D4C4A00D805C7 /* MemoFormVC.swift in Sources */,
 				8504BDBE1F8BC85E00D805C7 /* AppDelegate.swift in Sources */,
+				4206D5061F9D83B800F61B3E /* ProfileVC.swift in Sources */,
 				8504BDD91F8D4CE400D805C7 /* MemoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
